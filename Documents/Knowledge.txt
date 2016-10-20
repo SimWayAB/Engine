@@ -1,0 +1,8 @@
+Rename files to lower case in a folder:
+for /f "Tokens=*" %%f in ('dir /l/b/a-d') do (svn rename "%%f" "%%f" & pause)
+
+//---------------------------------------------------------------
+http://msdn.microsoft.com/en-us/library/bb310595(VS.85).aspx
+
+On all modern processors, you can assume that reads and writes of naturally aligned native types are atomic. As long as the memory bus is at least as wide as the type being read or written, the CPU reads and writes these types in a single bus transaction, making it impossible for other threads to see them in a half-completed state. On x86 and x64 there, is no guarantee that reads and writes larger than eight bytes are atomic. This means that 16-byte reads and writes of streaming SIMD extension (SSE) registers, and string operations, might not be atomic.
+//---------------------------------------------------------------
